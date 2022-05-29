@@ -6,25 +6,33 @@
 }
 
 body {
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c450c0 46%,
-    #ffcc70 100%
-  );
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.frame {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("./img/pexels-pixabay-wood.jpg") center center/cover;
+  width: 56vh;
+  height: 80vh;
+  padding-top: 6vh;
+  box-shadow: 0 2px 10px 0 rgba(136, 136, 136, 0.77);
+  border-radius: 8px;
+}
+
 .clock {
-  width: 500px;
-  height: 500px;
-  background-color: rgba(255, 255, 255, 0.8);
+  width: 45vh;
+  height: 45vh;
+  background-color: white;
   border-radius: 50%;
   border: 2px solid black;
   position: relative;
+  box-shadow: 0 4px 10px 0 rgba(136, 136, 136, 0.77);
 }
 
 .clock .number {
@@ -35,9 +43,9 @@ body {
   height: 100%;
   text-align: center;
   transform: rotate(var(--rotation));
-  font-size: 1.8rem;
+  font-size: 3.5vh;
   font-weight: 500;
-  padding: 15px;
+  padding: 10px;
 }
 
 .clock .number.number-1 {
@@ -98,22 +106,34 @@ body {
   z-index: 10;
   transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
   transform-origin: bottom;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 
 .clock .hand.seconds {
-  width: 3px;
+  width: 2px;
   height: 40%;
   background-color: red;
 }
 .clock .hand.minutes {
-  width: 7px;
+  width: 5px;
   height: 35%;
   background-color: black;
 }
 .clock .hand.hours {
-  width: 10px;
+  width: 7px;
   height: 25%;
   background-color: black;
+}
+
+.digitalVersion {
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: row;
+  font-size: 10vh;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.digitalVersion .separator {
+  font-size: 9vh;
 }
